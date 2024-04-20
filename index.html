@@ -16,13 +16,14 @@
         /*Make a list of choices*/
         const choices = ["Rock", "Scissors", "Paper"];
         const computerChoice = getComputerChoice(choices);
-        console.log(computerChoice);
+        /*Ask for user input*/
+        let playerChoice = prompt("Enter rock, scissors, or paper")
         /*function that plays a round of Rock Scissors Paper*/
         function playRound(playerChoice, computerChoice) {
             if (playerChoice.toUpperCase() == computerChoice.toUpperCase())
                 return "It's a tie."
             else if (playerChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "paper")
-                return "You lose, paper beats rock!"
+                return "You lose, paper beats rock!" 
             else if (playerChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "scissors")
                 return "You win, rock beats scissors!"
             else if (playerChoice.toLowerCase() == "paper" && computerChoice.toLowerCase() == "scissors")
@@ -36,22 +37,16 @@
             else
                 return "That's not a valid choice!"
         }
-        /*Ask for user input*/
-        let playerChoice = prompt("Enter rock, scissors, or paper")
         console.log(playRound(playerChoice, computerChoice))
-        
-        /*Declare a variable for the count of rounds*/
-        roundCount = 0
-        //Declare a variable for round limit//
-        roundLimit = 5
-        /*Declare a vavriable for the players wins*/
-        playerWins = 0
-        /*Declare a variable for the computer wins*/
-        computerWins = 0
-        /*Function for a five round game*/
+
         function playGame() {
-            
+            for (let roundCount = 0; roundCount < 5; roundCount ++) {
+                let pl
+
+            }
+
         }
+        
     </script>
 </body>
 
