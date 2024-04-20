@@ -19,8 +19,24 @@
         console.log(computerChoice);
         /*function that plays a round of Rock Scissors Paper*/
         function playRound(playerChoice, computerChoice) {
-            
+            if (playerChoice == computerChoice)
+                return "It's a tie."
+            else if (playerChoice == "Rock" && computerChoice == "Paper")
+                return "You lose, paper beats rock!"
+            else if (playerChoice == "Rock" && computerChoice == "Scissors")
+                return "You win, rock beats scissors!"
+            else if (playerChoice == "Paper" && computerChoice == "Scissors")
+                return "You lose, scissors beats paper"
+            else if (playerChoice == "Paper" && computerChoice == "Rock")
+                return "You win, paper beats rock!"
+            else if (playerChoice == "Scissors" && computerChoice == "Rock")
+                return "You lose, rock beats scissors!"
+            else if (playerChoice == "Scissors" && computerChoice == "Paper")
+                return "You win, scissors beats paper"
         }
+
+        const playerChoice = "Rock"
+        console.log(playRound(playerChoice, computerChoice))
     </script>
 </body>
 
