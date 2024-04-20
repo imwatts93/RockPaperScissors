@@ -19,24 +19,27 @@
         console.log(computerChoice);
         /*function that plays a round of Rock Scissors Paper*/
         function playRound(playerChoice, computerChoice) {
-            if (playerChoice == computerChoice)
+            if (playerChoice.toUpperCase() == computerChoice.toUpperCase())
                 return "It's a tie."
-            else if (playerChoice == "Rock" && computerChoice == "Paper")
+            else if (playerChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "paper")
                 return "You lose, paper beats rock!"
-            else if (playerChoice == "Rock" && computerChoice == "Scissors")
+            else if (playerChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "scissors")
                 return "You win, rock beats scissors!"
-            else if (playerChoice == "Paper" && computerChoice == "Scissors")
-                return "You lose, scissors beats paper"
-            else if (playerChoice == "Paper" && computerChoice == "Rock")
+            else if (playerChoice.toLowerCase() == "paper" && computerChoice.toLowerCase() == "scissors")
+                return "You lose, scissors beats paper!"
+            else if (playerChoice.toLowerCase() == "paper" && computerChoice.toLowerCase() == "rock")
                 return "You win, paper beats rock!"
-            else if (playerChoice == "Scissors" && computerChoice == "Rock")
+            else if (playerChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "rock")
                 return "You lose, rock beats scissors!"
-            else if (playerChoice == "Scissors" && computerChoice == "Paper")
+            else if (playerChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "paper")
                 return "You win, scissors beats paper"
+            else
+                return "That's not a valid choice!"
         }
-
-        const playerChoice = "Rock"
+        let playerChoice = prompt("Enter rock, scissors, or paper")
         console.log(playRound(playerChoice, computerChoice))
+        /*Ask for user input*/
+        
     </script>
 </body>
 
