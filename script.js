@@ -4,14 +4,10 @@ function getComputerChoice(array) {
 }
 //Make a list of choices//
 let choices = ["Rock", "Scissors", "Paper"];
-//let computerChoice = getComputerChoice(choices);//
-//console.log(computerChoice)//
 //Ask for player input//
 function getPlayerChoice() {
     return prompt("Enter rock, scissors, or paper: ");
 }
-//const playerChoice = getPlayerChoice()//
-//console.log(playerChoice)//
 
 let playerScore = 0;
 let computerScore = 0;
@@ -48,13 +44,6 @@ function playRound(playerChoice, computerChoice) {
     else
         return alert("That's not a valid choice!")
 }
-
-//Test playRound() function//
-
-/*playRound(playerChoice,computerChoice);
-console.log(playerScore);
-console.log(computerScore);*/
-
 
 function playGame() { {
     let playerScore = 0;
