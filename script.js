@@ -48,7 +48,41 @@ function playRound(playerChoice, computerChoice) {
     else
         return alert("That's not a valid choice!")
 }
-playRound(playerChoice,computerChoice);
+/*playRound(playerChoice,computerChoice);
 console.log(playerScore);
-console.log(computerScore);
+console.log(computerScore);*/
 // potential problem. I need to study more about defining functions and calling functions//
+
+function playGame() {
+    let playerScore = 0;
+    let computerScore = 0;
+    let playerChoice1 = getPlayerChoice();
+    let computerChoice1 = getComputerChoice(choices);
+    playRound(playerChoice1, computerChoice1);
+    let playerChoice2 = getPlayerChoice();
+    let computerChoice2 = getComputerChoice(choices);
+    playRound(playerChoice2, computerChoice2)
+    let playerChoice3 = getPlayerChoice();
+    let computerChoice3 = getComputerChoice(choices);
+    playRound(playerChoice3, computerChoice3)
+    let playerChoice4 = getPlayerChoice();
+    let computerChoice4 = getComputerChoice(choices);
+    playRound(playerChoice4, computerChoice4)
+    let playerChoice5 = getPlayerChoice();
+    let computerChoice5 = getComputerChoice(choices);
+    playRound(playerChoice5, computerChoice5);
+    
+    if (playerScore == computerScore) {
+        console.log("It's a tie!")
+    }
+    else if (playerScore > computerScore) {
+        console.log("Congratulations! You Win!")
+    }
+    else {
+        console.log("I beat you! Better luck next time!")
+    } 
+}
+
+playGame()
+console.log("Computer: " + computerScore)
+console.log("Player: " + playerScore)
