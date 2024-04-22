@@ -46,23 +46,23 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function playGame() { {
-    let playerScore = 0;
-    let computerScore = 0;
-    let playerChoice1 = getPlayerChoice();
-    let computerChoice1 = getComputerChoice(choices);
-    playRound(playerChoice1, computerChoice1);
-    let playerChoice2 = getPlayerChoice();
-    let computerChoice2 = getComputerChoice(choices);
-    playRound(playerChoice2, computerChoice2)
-    let playerChoice3 = getPlayerChoice();
-    let computerChoice3 = getComputerChoice(choices);
-    playRound(playerChoice3, computerChoice3)
-    let playerChoice4 = getPlayerChoice();
-    let computerChoice4 = getComputerChoice(choices);
-    playRound(playerChoice4, computerChoice4)
-    let playerChoice5 = getPlayerChoice();
-    let computerChoice5 = getComputerChoice(choices);
-    playRound(playerChoice5, computerChoice5);
+        let playerScore = 0;
+        let computerScore = 0;
+        let playerChoice1 = getPlayerChoice();
+        let computerChoice1 = getComputerChoice(choices);
+        playRound(playerChoice1, computerChoice1);
+        let playerChoice2 = getPlayerChoice();
+        let computerChoice2 = getComputerChoice(choices);
+        playRound(playerChoice2, computerChoice2)
+        let playerChoice3 = getPlayerChoice();
+        let computerChoice3 = getComputerChoice(choices);
+        playRound(playerChoice3, computerChoice3)
+        let playerChoice4 = getPlayerChoice();
+        let computerChoice4 = getComputerChoice(choices);
+        playRound(playerChoice4, computerChoice4)
+        let playerChoice5 = getPlayerChoice();
+        let computerChoice5 = getComputerChoice(choices);
+        playRound(playerChoice5, computerChoice5);
     }
     
     {
