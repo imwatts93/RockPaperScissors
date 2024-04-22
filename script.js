@@ -1,17 +1,17 @@
-/*Make a function that randomly selects an element from an array*/
+//Make a function that randomly selects an element from an array//
 function getComputerChoice(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
-/*Make a list of choices*/
+//Make a list of choices//
 let choices = ["Rock", "Scissors", "Paper"];
-let computerChoice = getComputerChoice(choices);
-console.log(computerChoice)
-/*Ask for player input*/
+//let computerChoice = getComputerChoice(choices);//
+//console.log(computerChoice)//
+//Ask for player input//
 function getPlayerChoice() {
     return prompt("Enter rock, scissors, or paper: ");
 }
-const playerChoice = getPlayerChoice()
-console.log(playerChoice)
+//const playerChoice = getPlayerChoice()//
+//console.log(playerChoice)//
 
 let playerScore = 0;
 let computerScore = 0;
@@ -48,12 +48,15 @@ function playRound(playerChoice, computerChoice) {
     else
         return alert("That's not a valid choice!")
 }
+
+//Test playRound() function//
+
 /*playRound(playerChoice,computerChoice);
 console.log(playerScore);
 console.log(computerScore);*/
-// potential problem. I need to study more about defining functions and calling functions//
 
-function playGame() {
+
+function playGame() { {
     let playerScore = 0;
     let computerScore = 0;
     let playerChoice1 = getPlayerChoice();
@@ -71,16 +74,18 @@ function playGame() {
     let playerChoice5 = getPlayerChoice();
     let computerChoice5 = getComputerChoice(choices);
     playRound(playerChoice5, computerChoice5);
-    
-    if (playerScore == computerScore) {
-        console.log("It's a tie!")
     }
-    else if (playerScore > computerScore) {
-        console.log("Congratulations! You Win!")
+    
+    {
+    if (playerScore > computerScore) {
+        console.log("Congratulations! You Win!");
+    }
+    else if (playerScore < computerScore) {
+        console.log("I beat you! Better luck next time!");
     }
     else {
-        console.log("I beat you! Better luck next time!")
-    } 
+        console.log("It's a tie!");
+    } }
 }
 
 playGame()
