@@ -7,7 +7,11 @@ let choices = ["Rock", "Scissors", "Paper"];
 //Ask for player input//
 function getPlayerChoice() {
     return prompt("Enter rock, scissors, or paper: ");
-}
+};
+
+const rockBtn = document.querySelector("#rockBtn");
+const paperBtn = document.querySelector("#paperBtn");
+const scissorsBtn = document.querySelector("#scissorsBtn")
 
 let playerScore = 0;
 let computerScore = 0;
@@ -45,7 +49,7 @@ function playRound(playerChoice, computerChoice) {
         return alert("That's not a valid choice!")
 }
 
-function playGame() { {
+/*function playGame() { {
         let playerScore = 0;
         let computerScore = 0;
         let playerChoice1 = getPlayerChoice();
@@ -77,6 +81,6 @@ function playGame() { {
     } }
 }
 
-playGame()
+playGame()*/
 console.log("Computer: " + computerScore)
 console.log("Player: " + playerScore)
