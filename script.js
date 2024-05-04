@@ -3,7 +3,7 @@ function getComputerChoice(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 //Make a list of choices//
-let choices = ["Rock", "Scissors", "Paper"];
+let choices = ["rock", "scissors", "paper"];
 //Ask for player input//
 
 let playerChoice = "";
@@ -14,6 +14,7 @@ const scissorsBtn = document.querySelector("#scissorsBtn");
 const currentRound = document.querySelector("#currentRound");
 const compScoreDisplay = document.querySelector("#compScoreDisplay");
 const playerScoreDisplay = document.querySelector("#playerScoreDisplay");
+const compChoiceDisplay = document.querySelector("#compChoiceDisplay");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -22,6 +23,7 @@ let roundCount = 0;
 rockBtn.addEventListener("click", () => {
     let playerChoice = "rock";
     let computerChoice = getComputerChoice(choices);
+    compChoiceDisplay.textContent = computerChoice;
     playRound(playerChoice, computerChoice);
     roundCount++;
     compScoreDisplay.textContent = computerScore.toString();
@@ -31,7 +33,8 @@ rockBtn.addEventListener("click", () => {
 
 paperBtn.addEventListener("click", () => {
     let playerChoice = "paper";
-    let computerChoice = getComputerChoice(choices);
+    let computerChoice = getComputerChoice(choices)
+    compChoiceDisplay.textContent = computerChoice;
     playRound(playerChoice, computerChoice);
     roundCount++;
     compScoreDisplay.textContent = computerScore.toString();
@@ -42,6 +45,7 @@ paperBtn.addEventListener("click", () => {
 scissorsBtn.addEventListener("click", () => {
     let playerChoice = "scissors";
     let computerChoice = getComputerChoice(choices);
+    compChoiceDisplay.textContent = computerChoice;
     playRound(playerChoice, computerChoice);
     roundCount++;
     compScoreDisplay.textContent = computerScore.toString();
