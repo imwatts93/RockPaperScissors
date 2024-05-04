@@ -73,12 +73,10 @@ function playRound(playerChoice, computerChoice) {
         computerScore++;
         return alert("You lose, rock beats scissors!")
     }
-    else if (playerChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "paper") {
+    else {
         playerScore++;
         return alert("You win, scissors beats paper")
     }
-    else
-        return alert("That's not a valid choice!")
 };
 
 
