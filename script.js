@@ -53,9 +53,12 @@ scissorsBtn.addEventListener("click", () => {
     currentRound.textContent = roundCount.toString();
 });
 /*function that plays a round of Rock Scissors Paper*/
+
 function playRound(playerChoice, computerChoice) {
+    
     if (playerChoice.toLowerCase() == computerChoice.toLowerCase()) {
         return alert("It's a tie.")
+        document.querySelector("#roundMessage").textContent = "It's a tie."
     }
     else if (playerChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "paper") {
         computerScore++;
