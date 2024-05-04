@@ -9,6 +9,8 @@ function getPlayerChoice() {
     return prompt("Enter rock, scissors, or paper: ");
 };
 
+let playerChoice = "";
+
 const rockBtn = document.querySelector("#rockBtn");
 const paperBtn = document.querySelector("#paperBtn");
 const scissorsBtn = document.querySelector("#scissorsBtn")
@@ -16,6 +18,24 @@ const scissorsBtn = document.querySelector("#scissorsBtn")
 let playerScore = 0;
 let computerScore = 0;
 
+rockBtn.addEventListener("click", () => {
+    let playerChoice = "rock";
+    console.log(playerChoice);
+    let computerChoice = getComputerChoice(choices);
+    playRound(playerChoice, computerChoice);
+});
+
+paperBtn.addEventListener("click", () => {
+    let playerChoice = "paper";
+    let computerChoice = getComputerChoice(choices);
+    playRound(playerChoice, computerChoice);
+});
+
+scissorsBtn.addEventListener("click", () => {
+    let playerChoice = "scissors";
+    let computerChoice = getComputerChoice(choices);
+    playRound(playerChoice, computerChoice);
+})
 /*function that plays a round of Rock Scissors Paper*/
 function playRound(playerChoice, computerChoice) {
     if (playerChoice.toLowerCase() == computerChoice.toLowerCase()) {
@@ -47,7 +67,11 @@ function playRound(playerChoice, computerChoice) {
     }
     else
         return alert("That's not a valid choice!")
-}
+};
+
+
+
+
 
 /*function playGame() { {
         let playerScore = 0;
@@ -82,5 +106,6 @@ function playRound(playerChoice, computerChoice) {
 }
 
 playGame()*/
-console.log("Computer: " + computerScore)
-console.log("Player: " + playerScore)
+    
+console.log("Computer: " + computerScore);
+console.log("Player: " + playerScore);
