@@ -20,19 +20,25 @@ rockBtn.addEventListener("click", () => {
     console.log(playerChoice);
     let computerChoice = getComputerChoice(choices);
     playRound(playerChoice, computerChoice);
+    console.log("Computer: " + computerScore);
+    console.log("Player: " + playerScore);
 });
 
 paperBtn.addEventListener("click", () => {
     let playerChoice = "paper";
     let computerChoice = getComputerChoice(choices);
     playRound(playerChoice, computerChoice);
+    console.log("Computer: " + computerScore);
+    console.log("Player: " + playerScore);
 });
 
 scissorsBtn.addEventListener("click", () => {
     let playerChoice = "scissors";
     let computerChoice = getComputerChoice(choices);
     playRound(playerChoice, computerChoice);
-})
+    console.log("Computer: " + computerScore);
+    console.log("Player: " + playerScore);
+});
 /*function that plays a round of Rock Scissors Paper*/
 function playRound(playerChoice, computerChoice) {
     if (playerChoice.toLowerCase() == computerChoice.toLowerCase()) {
@@ -66,7 +72,7 @@ function playRound(playerChoice, computerChoice) {
         return alert("That's not a valid choice!")
 };
 
-
+let roundCount = 0
 
 
 
@@ -104,5 +110,3 @@ function playRound(playerChoice, computerChoice) {
 
 playGame()*/
     
-console.log("Computer: " + computerScore);
-console.log("Player: " + playerScore);
