@@ -10,34 +10,43 @@ let playerChoice = "";
 
 const rockBtn = document.querySelector("#rockBtn");
 const paperBtn = document.querySelector("#paperBtn");
-const scissorsBtn = document.querySelector("#scissorsBtn")
+const scissorsBtn = document.querySelector("#scissorsBtn");
+const currentRound = document.querySelector("#currentRound");
+const compScoreDisplay = document.querySelector("#compScoreDisplay");
+const playerScoreDisplay = document.querySelector("#playerScoreDisplay");
 
 let playerScore = 0;
 let computerScore = 0;
+let roundCount = 0;
 
 rockBtn.addEventListener("click", () => {
     let playerChoice = "rock";
-    console.log(playerChoice);
     let computerChoice = getComputerChoice(choices);
     playRound(playerChoice, computerChoice);
-    console.log("Computer: " + computerScore);
-    console.log("Player: " + playerScore);
+    roundCount++;
+    compScoreDisplay.textContent = computerScore.toString();
+    playerScoreDisplay.textContent = playerScore.toString();
+    currentRound.textContent = roundCount.toString();
 });
 
 paperBtn.addEventListener("click", () => {
     let playerChoice = "paper";
     let computerChoice = getComputerChoice(choices);
     playRound(playerChoice, computerChoice);
-    console.log("Computer: " + computerScore);
-    console.log("Player: " + playerScore);
+    roundCount++;
+    compScoreDisplay.textContent = computerScore.toString();
+    playerScoreDisplay.textContent = playerScore.toString();
+    currentRound.textContent = roundCount.toString();
 });
 
 scissorsBtn.addEventListener("click", () => {
     let playerChoice = "scissors";
     let computerChoice = getComputerChoice(choices);
     playRound(playerChoice, computerChoice);
-    console.log("Computer: " + computerScore);
-    console.log("Player: " + playerScore);
+    roundCount++;
+    compScoreDisplay.textContent = computerScore.toString();
+    playerScoreDisplay.textContent = playerScore.toString();
+    currentRound.textContent = roundCount.toString();
 });
 /*function that plays a round of Rock Scissors Paper*/
 function playRound(playerChoice, computerChoice) {
@@ -72,7 +81,7 @@ function playRound(playerChoice, computerChoice) {
         return alert("That's not a valid choice!")
 };
 
-let roundCount = 0
+
 
 
 
