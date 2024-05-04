@@ -5,9 +5,6 @@ function getComputerChoice(array) {
 //Make a list of choices//
 let choices = ["Rock", "Scissors", "Paper"];
 //Ask for player input//
-function getPlayerChoice() {
-    return prompt("Enter rock, scissors, or paper: ");
-};
 
 let playerChoice = "";
 
