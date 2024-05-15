@@ -121,7 +121,11 @@ function endgame() {
         winHead.appendChild(tieMessage);
 
         endGameDisplay.appendChild(winHead)
-    }
+    };
+
+    rockBtn.disabled = true;
+    scissorsBtn.disabled = true;
+    paperBtn.disabled = true;
 };
 
 
