@@ -109,7 +109,7 @@ function endgame() {
         endGameDisplay.appendChild(winHead);
     }
 
-    else if (playerscore < computerScore) {
+    else if (playerScore < computerScore) {
         const lossMessage = document.createTextNode("Sorry! Better luck next time.");
         winHead.appendChild(lossMessage);
 
