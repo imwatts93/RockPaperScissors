@@ -29,6 +29,10 @@ rockBtn.addEventListener("click", () => {
     compScoreDisplay.textContent = computerScore.toString();
     playerScoreDisplay.textContent = playerScore.toString();
     currentRound.textContent = roundCount.toString();
+
+    if (roundCount == 5) {
+        endgame();
+    };
 });
 
 paperBtn.addEventListener("click", () => {
@@ -40,6 +44,10 @@ paperBtn.addEventListener("click", () => {
     compScoreDisplay.textContent = computerScore.toString();
     playerScoreDisplay.textContent = playerScore.toString();
     currentRound.textContent = roundCount.toString();
+
+    if (roundCount == 5) {
+        endgame();
+    };
 });
 
 scissorsBtn.addEventListener("click", () => {
@@ -51,6 +59,11 @@ scissorsBtn.addEventListener("click", () => {
     compScoreDisplay.textContent = computerScore.toString();
     playerScoreDisplay.textContent = playerScore.toString();
     currentRound.textContent = roundCount.toString();
+
+
+    if (roundCount == 5) {
+        endgame();
+    };
 });
 /*function that plays a round of Rock Scissors Paper*/
 
@@ -86,7 +99,30 @@ function playRound(playerChoice, computerChoice) {
     }
 };
 
+function endgame() {
+    const endGameDisplay = document.querySelector("#endGameDisplay");
+    const winHead = document.createElement("h3");
+    if (playerScore > computerScore) { 
+        const winMessage = document.createTextNode("Congratulations! You Win!");
+        winHead.appendChild(winMessage);
 
+        endGameDisplay.appendChild(winHead);
+    }
+
+    else if (playerscore < computerScore) {
+        const lossMessage = document.createTextNode("Sorry! Better luck next time.");
+        winHead.appendChild(lossMessage);
+
+        endGameDisplay.appendChild(winHead); 
+    }
+
+    else {
+        const tieMessage = document.createTextNode("Looks like a draw!");
+        winHead.appendChild(tieMessage);
+
+        endGameDisplay.appendChild(winHead)
+    }
+};
 
 
 
